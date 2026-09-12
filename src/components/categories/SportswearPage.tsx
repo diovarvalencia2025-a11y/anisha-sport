@@ -65,13 +65,16 @@ export const SportswearPage: React.FC = () => {
     <div className="min-h-screen bg-background text-white pt-24 pb-32 animate-fadeIn">
       
       {/* 01 // SPORTSWEAR HERO BANNER */}
-      <section className="relative h-[55vh] sm:h-[65vh] w-full overflow-hidden flex items-end pb-12 sm:pb-16 bg-[#090909]">
+      <section className="relative h-[60vh] sm:h-[70vh] w-full overflow-hidden flex items-end pb-12 sm:pb-16 bg-[#070707]">
         <img
-          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2000&auto=format&fit=crop"
+          src="./images/hero/hero-sportswear.png"
           alt="ANISHA Ropa Deportiva"
-          className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.6] contrast-[1.15]"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right transition-transform duration-1000"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        {/* Degradado negro de izquierda a derecha difuminándose totalmente a la derecha para nitidez total */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-[#070707]/80 via-35% md:via-45% to-transparent to-85% md:to-80% pointer-events-none" />
+        {/* Sutil fundido inferior con el fondo */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent pointer-events-none" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
@@ -82,7 +85,7 @@ export const SportswearPage: React.FC = () => {
             ENTRENA SIN <br />
             <span className="text-volt">LÍMITES.</span>
           </h1>
-          <p className="text-xs sm:text-sm text-white/70 max-w-xl font-light">
+          <p className="text-xs sm:text-sm text-white/80 max-w-xl font-light leading-relaxed">
             Pijamas de descanso, conjuntos y licras de compresión para dama, pantalonetas y conjuntos deportivos para caballero.
           </p>
         </div>
