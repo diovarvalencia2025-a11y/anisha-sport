@@ -38,12 +38,12 @@ export const AthleteStory: React.FC = () => {
             <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-mono font-bold tracking-widest text-volt uppercase block">
-                  {activeImageState ? 'STATE B // EXPLOSIVE CADENCE' : 'STATE A // ISOMETRIC FOCUS'}
+                  {activeImageState ? 'ESTADO B // RITMO EXPLOSIVO' : 'ESTADO A // ENFOQUE ISOMÉTRICO'}
                 </span>
                 <span className="font-display font-black text-xl text-white">ELENA VUKOVIC</span>
               </div>
               <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-mono text-white/70">
-                HOVER TO SWITCH
+                PASA EL CURSOR PARA CAMBIAR
               </span>
             </div>
           </div>
@@ -54,36 +54,36 @@ export const AthleteStory: React.FC = () => {
             <div className="space-y-2">
               <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase">
                 <Flame size={16} />
-                <span>12 // THE ATHLETE PROTOCOL</span>
+                <span>12 // EL PROTOCOLO ATLETA</span>
               </div>
               <h2 className="font-display font-black text-4xl sm:text-6xl uppercase tracking-tight text-white leading-none">
-                BUILT THROUGH <br />
-                <span className="text-volt">DISCIPLINE.</span>
+                CONSTRUIDO CON <br />
+                <span className="text-volt">DISCIPLINA.</span>
               </h2>
             </div>
 
             {/* Kinetic Word Sequence */}
             <div className="grid grid-cols-2 gap-4 border-t border-b border-white/10 py-6">
               <div>
-                <span className="font-mono text-xs text-white/40 block">PHASE 01</span>
-                <strong className="font-display font-black text-xl text-white">DISCIPLINE.</strong>
+                <span className="font-mono text-xs text-white/40 block">FASE 01</span>
+                <strong className="font-display font-black text-xl text-white">DISCIPLINA.</strong>
               </div>
               <div>
-                <span className="font-mono text-xs text-white/40 block">PHASE 02</span>
-                <strong className="font-display font-black text-xl text-white">FOCUS.</strong>
+                <span className="font-mono text-xs text-white/40 block">FASE 02</span>
+                <strong className="font-display font-black text-xl text-white">ENFOQUE.</strong>
               </div>
               <div>
-                <span className="font-mono text-xs text-white/40 block">PHASE 03</span>
-                <strong className="font-display font-black text-xl text-white">SPEED.</strong>
+                <span className="font-mono text-xs text-white/40 block">FASE 03</span>
+                <strong className="font-display font-black text-xl text-white">VELOCIDAD.</strong>
               </div>
               <div>
-                <span className="font-mono text-xs text-white/40 block">PHASE 04</span>
-                <strong className="font-display font-black text-xl text-volt">POWER.</strong>
+                <span className="font-mono text-xs text-white/40 block">FASE 04</span>
+                <strong className="font-display font-black text-xl text-volt">POTENCIA.</strong>
               </div>
             </div>
 
             <blockquote className="text-sm sm:text-base text-white/80 font-light leading-relaxed italic border-l-2 border-volt pl-4">
-              "Performance isn't given by chance or inherited by luck. It is built rep by rep, breath by breath, in the shadows before anyone else is awake."
+              "El rendimiento no se da por casualidad ni por suerte. Se forja día a día, repetición a repetición, antes de que el resto del mundo despierte."
             </blockquote>
 
             <div>
@@ -91,7 +91,7 @@ export const AthleteStory: React.FC = () => {
                 onClick={() => navigateTo('sportswear')}
                 className="py-3.5 px-8 rounded-full bg-white text-black hover:bg-volt font-mono font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center space-x-2"
               >
-                <span>SHOP ATHLETE LOOKBOOK</span>
+                <span>VER LOOKBOOK DEPORTIVO</span>
                 <ArrowUpRight size={16} />
               </button>
             </div>

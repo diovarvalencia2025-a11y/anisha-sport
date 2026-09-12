@@ -24,14 +24,14 @@ export const BeforeAfterSlider: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <span className="text-xs font-mono font-bold tracking-widest text-volt uppercase block mb-2">
-              21 // CAMPAIGN SPLIT TRANSITION
+              21 // TRANSICIÓN DE INGENIERÍA
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase tracking-tight text-white">
-              LAB MATRIX VS. REALITY
+              ESTRUCTURA INTERNA VS. REALIDAD
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-white/50 max-w-sm mt-2 md:mt-0 font-light">
-            Drag across the canvas to reveal the internal carbon-fiber composite matrix inside our racing chassis.
+            Desliza sobre la imagen para revelar el chasis interno de fibra y amortiguación dentro de nuestras zapatillas de competición.
           </p>
         </div>
 
@@ -45,11 +45,11 @@ export const BeforeAfterSlider: React.FC = () => {
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1800&auto=format&fit=crop"
-              alt="ANISHA Reality"
+              alt="ANISHA Acabado Real"
               className="w-full h-full object-cover filter contrast-[1.1]"
             />
             <div className="absolute bottom-6 left-6 z-10 bg-black/70 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-xs font-mono font-bold text-white uppercase">
-              FINISHED RUNNER (CYBER VOLT)
+              CALZADO TERMINADO (EDICIÓN VOLT)
             </div>
           </div>
 
@@ -60,12 +60,12 @@ export const BeforeAfterSlider: React.FC = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1800&auto=format&fit=crop"
-              alt="ANISHA Carbon Matrix Lab"
+              alt="ANISHA Estructura Interna"
               className="w-full h-full object-cover filter grayscale contrast-[1.4] brightness-[0.8]"
             />
             <div className="absolute inset-0 bg-volt/10 mix-blend-color-dodge" />
             <div className="absolute bottom-6 right-6 z-10 bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-volt/50 text-xs font-mono font-black text-volt uppercase">
-              CARBON SKELETON LAB
+              ESQUELETO Y MATRIZ INTERNA
             </div>
           </div>
 

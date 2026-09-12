@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => navigateTo('home')}
             className="group flex items-center space-x-3 text-left focus:outline-none"
-            data-cursor-text="HOME"
+            data-cursor-text="INICIO"
           >
             <div className="relative w-8 h-8 flex items-center justify-center bg-white/10 rounded-lg border border-white/20 group-hover:border-volt group-hover:shadow-[0_0_15px_rgba(204,255,0,0.5)] transition-all duration-300">
               <span className="font-display font-black text-white text-base tracking-tighter group-hover:text-volt transition-colors">

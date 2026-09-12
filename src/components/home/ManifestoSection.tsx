@@ -14,17 +14,17 @@ export const ManifestoSection: React.FC = () => {
         {/* Section Label */}
         <div className="flex items-center space-x-3 text-xs font-mono font-bold tracking-widest text-volt uppercase">
           <Zap size={16} />
-          <span>03 // THE ANISHA MANIFESTO</span>
+          <span>03 // EL MANIFIESTO ANISHA</span>
         </div>
 
         {/* Massive Kinetic Headline */}
         <div className="space-y-4">
           <h2 className="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-tight text-white/90">
-            YOUR BODY KNOWS <br />
-            <span className="text-volt">THE MOVEMENT.</span> <br />
-            YOUR MIND DEFINES <br />
+            TU CUERPO CONOCE <br />
+            <span className="text-volt">EL MOVIMIENTO.</span> <br />
+            TU MENTE DEFINE <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-white/10">
-              THE LIMIT.
+              EL LÍMITE.
             </span>
           </h2>
         </div>
@@ -36,9 +36,9 @@ export const ManifestoSection: React.FC = () => {
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-volt">
               <Zap size={20} />
             </div>
-            <h3 className="font-display font-bold text-lg text-white">01 — OBSESSION WITH KINETICS</h3>
+            <h3 className="font-display font-bold text-lg text-white">01 — OBSESIÓN POR EL DETALLE</h3>
             <p className="text-xs sm:text-sm font-light leading-relaxed">
-              We design every seam, carbon curve, and fragrance molecule around biomechanical human performance in motion.
+              Seleccionamos cada prenda, cada silueta de calzado y cada acorde de fragancia pensando en la comodidad y la presencia impecable.
             </p>
           </div>
 
@@ -46,9 +46,9 @@ export const ManifestoSection: React.FC = () => {
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-volt">
               <Shield size={20} />
             </div>
-            <h3 className="font-display font-bold text-lg text-white">02 — AEROSPACE MATERIALS</h3>
+            <h3 className="font-display font-bold text-lg text-white">02 — MATERIALES DE ALTA GAMA</h3>
             <p className="text-xs sm:text-sm font-light leading-relaxed">
-              Supercritical nitrogen-infused foams, carbon composites, and silver-ion antibacterial weaves built to outlast extreme stress.
+              Tejidos elásticos sin fricción, suelas con amortiguación avanzada y fragancias concentradas que duran todo el día.
             </p>
           </div>
 
@@ -56,9 +56,9 @@ export const ManifestoSection: React.FC = () => {
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-volt">
               <Flame size={20} />
             </div>
-            <h3 className="font-display font-bold text-lg text-white">03 — NO FINISH LINE</h3>
+            <h3 className="font-display font-bold text-lg text-white">03 — SIN LÍMITES</h3>
             <p className="text-xs sm:text-sm font-light leading-relaxed">
-              True greatness is not a medal or a destination. It is the unyielding commitment to continuous forward velocity.
+              El verdadero estilo y la superación no se detienen. Es la disciplina diaria de avanzar siempre con la mejor actitud.
             </p>
           </div>
 

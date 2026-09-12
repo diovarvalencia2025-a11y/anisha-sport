@@ -9,53 +9,53 @@ export const PinnedStorytelling: React.FC = () => {
   const scenes = [
     {
       id: 'athlete',
-      stage: 'STAGE 01',
-      title: 'THE ATHLETE IN MOTION',
-      tagline: 'Raw discipline forged in the quiet hours before dawn.',
-      desc: 'Before the medals, before the stadium lights, there is only the pulse, the breath, and the friction against gravity.',
+      stage: 'ETAPA 01',
+      title: 'EL ATLETA EN MOVIMIENTO',
+      tagline: 'Disciplina pura forjada en las horas previas al amanecer.',
+      desc: 'Antes de las medallas, antes de los reflectores del estadio, solo existe el pulso, la respiración y la constancia diaria.',
       image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop',
       metric: '04:30 AM',
-      metricLabel: 'First Repetition'
+      metricLabel: 'Primera Repetición'
     },
     {
       id: 'product',
-      stage: 'STAGE 02',
-      title: 'ENGINEERED SECOND SKIN',
-      tagline: 'Zero seams. Zero drag. Absolute biomechanical synergy.',
-      desc: 'Crafted with continuous matrix compression fibers that stabilize kinetic chains without restricting explosive flexibility.',
+      stage: 'ETAPA 02',
+      title: 'SEGUNDA PIEL DISEÑADA',
+      tagline: 'Cero costuras. Cero fricción. Sinergia biomecánica absoluta.',
+      desc: 'Confeccionado con fibras de compresión continua que estabilizan los grupos musculares sin limitar la flexibilidad.',
       image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop',
-      metric: '85 GRAMS',
-      metricLabel: 'Aerodynamic Mass'
+      metric: '85 GRAMOS',
+      metricLabel: 'Masa Aerodinámica'
     },
     {
       id: 'technology',
-      stage: 'STAGE 03',
-      title: 'SUPERCRITICAL NITROGEN',
-      tagline: 'Energy cannot be destroyed. Only redirected forward.',
-      desc: 'Our proprietary NitroStrata™ midsole captures 89% of ground impact energy and springs it back into forward propulsion.',
+      stage: 'ETAPA 03',
+      title: 'AMORTIGUACIÓN REACTIVA',
+      tagline: 'La energía no se destruye. Se canaliza hacia adelante.',
+      desc: 'Nuestra mediasuela con tecnología NitroStrata™ absorbe el impacto contra el suelo devolviéndolo en impulso y avance continuo.',
       image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop',
       metric: '89.4%',
-      metricLabel: 'Energy Return'
+      metricLabel: 'Retorno de Energía'
     },
     {
       id: 'performance',
-      stage: 'STAGE 04',
-      title: 'UNBREAKABLE CONFIDENCE',
-      tagline: 'When design meets willpower, records become memories.',
-      desc: 'Tested across 15,000 kilometers of high-altitude marathon trials and brutal multi-axis gym loads.',
+      stage: 'ETAPA 04',
+      title: 'CONFIANZA INQUEBRANTABLE',
+      tagline: 'Cuando el diseño se une a la voluntad, los récords se superan.',
+      desc: 'Comprobado en más de 15.000 kilómetros de pruebas de atletismo en altitud y entrenamientos intensivos de fuerza.',
       image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop',
       metric: '15,000 KM',
-      metricLabel: 'Lab Validation'
+      metricLabel: 'Validación en Pista'
     },
     {
       id: 'anisha',
-      stage: 'STAGE 05',
+      stage: 'ETAPA 05',
       title: 'ANISHA SPORT',
-      tagline: 'Move without limits. Today, tomorrow, forever.',
-      desc: 'The pinnacle of luxury sportswear engineering designed for athletes who refuse to accept boundaries.',
+      tagline: 'Muévete sin límites. Hoy, mañana, siempre.',
+      desc: 'El estándar definitivo de moda y rendimiento deportivo, creado para quienes buscan superarse cada día.',
       image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1600&auto=format&fit=crop',
       metric: '∞',
-      metricLabel: 'Zero Limits'
+      metricLabel: 'Cero Límites'
     }
   ];
 
@@ -69,10 +69,10 @@ export const PinnedStorytelling: React.FC = () => {
         <div className="flex items-center justify-between mb-8 sm:mb-12">
           <div className="flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase">
             <Cpu size={16} />
-            <span>20 // PINNED STORYTELLING EXPERIENCE</span>
+            <span>20 // HISTORIA & VISIÓN DE MARCA</span>
           </div>
           <span className="text-xs font-mono text-white/50">
-            SCENE {activeScene + 1} OF {scenes.length}
+            ESCENA {activeScene + 1} DE {scenes.length}
           </span>
         </div>
 
@@ -146,7 +146,7 @@ export const PinnedStorytelling: React.FC = () => {
                 }}
                 className="px-5 py-2.5 rounded-full bg-volt hover:bg-white text-black font-mono text-xs font-black uppercase tracking-wider flex items-center space-x-2 transition-all shadow-[0_0_20px_rgba(204,255,0,0.3)]"
               >
-                <span>{activeScene === scenes.length - 1 ? 'RESTART JOURNEY ↺' : 'NEXT CHAPTER →'}</span>
+                <span>{activeScene === scenes.length - 1 ? 'REINICIAR RECORRIDO ↺' : 'SIGUIENTE ETAPA →'}</span>
               </button>
             </div>
 

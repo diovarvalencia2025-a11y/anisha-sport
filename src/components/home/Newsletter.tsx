@@ -20,22 +20,22 @@ export const Newsletter: React.FC = () => {
         
         <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10">
           <Sparkles size={14} />
-          <span>24 // EXCLUSIVE ACCESS</span>
+          <span>24 // NOVEDADES EXCLUSIVAS</span>
         </div>
 
         <div className="space-y-3">
           <h2 className="font-display font-black text-4xl sm:text-6xl uppercase tracking-tight text-white">
-            JOIN THE MOVEMENT
+            ÚNETE A LA COMUNIDAD
           </h2>
           <p className="text-xs sm:text-sm text-white/60 max-w-lg mx-auto font-light leading-relaxed">
-            Be the first to discover new releases, performance technology prototypes, and exclusive ANISHA SPORT stories.
+            Sé la primera persona en conocer nuevos lanzamientos de zapatillas, perfumes exclusivos y promociones de ANISHA SPORT.
           </p>
         </div>
 
         {submitted ? (
           <div className="p-6 rounded-2xl bg-surface border border-volt/50 text-volt font-mono text-sm flex items-center justify-center space-x-2 animate-fadeIn max-w-md mx-auto">
             <Check size={18} />
-            <span>WELCOME TO THE INNER CIRCLE OF ANISHA SPORT.</span>
+            <span>¡BIENVENIDO/A A LA COMUNIDAD ANISHA SPORT!</span>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -46,7 +46,7 @@ export const Newsletter: React.FC = () => {
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="YOUR EMAIL ADDRESS"
+                placeholder="TU CORREO ELECTRÓNICO"
                 className="w-full pl-11 pr-4 py-4 rounded-2xl bg-surface border border-surface-border text-white text-xs font-mono placeholder-white/40 focus:outline-none focus:border-volt transition-colors"
               />
             </div>
@@ -54,7 +54,7 @@ export const Newsletter: React.FC = () => {
               type="submit"
               className="py-4 px-8 rounded-2xl bg-volt hover:bg-white text-black font-mono font-black text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(204,255,0,0.3)] flex items-center justify-center space-x-2 flex-shrink-0"
             >
-              <span>JOIN ANISHA</span>
+              <span>SUSCRIBIRME</span>
               <ArrowRight size={16} />
             </button>
           </form>

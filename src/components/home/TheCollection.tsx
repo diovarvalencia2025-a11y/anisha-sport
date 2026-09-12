@@ -22,17 +22,17 @@ export const TheCollection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div>
             <span className="text-xs font-mono font-bold tracking-widest text-volt uppercase block mb-2">
-              04 // CURATED FLAGSHIPS
+              04 // DESTACADOS DEL MES
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase tracking-tight text-white">
-              THE COLLECTION
+              LA COLECCIÓN
             </h2>
           </div>
           <button
             onClick={() => navigateTo('sportswear')}
             className="mt-4 md:mt-0 inline-flex items-center space-x-2 text-xs font-mono font-bold text-volt hover:text-white transition-colors"
           >
-            <span>VIEW ALL PERFORMANCE PRODUCTS</span>
+            <span>VER TODOS LOS PRODUCTOS</span>
             <ArrowUpRight size={16} />
           </button>
         </div>

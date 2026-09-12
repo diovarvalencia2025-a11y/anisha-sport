@@ -20,22 +20,22 @@ export const CategoryGateway: React.FC = () => {
       id: 'sportswear',
       view: 'sportswear',
       number: '01',
-      title: 'SPORTSWEAR',
-      tagline: 'TRAIN WITHOUT LIMITS',
-      description: 'Ultra-compression seamless sets, thermal regulating hoodies, and aerodynamic laser-vented tops.',
+      title: 'ROPA DEPORTIVA',
+      tagline: 'ENTRENA SIN LÍMITES',
+      description: 'Conjuntos de máxima compresión, licras de ajuste perfecto y prendas térmicas de alto rendimiento.',
       image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
-      badge: 'HIGH-TECH APPAREL',
+      badge: 'ROPA TÉCNICA',
       icon: Activity
     },
     {
       id: 'sneakers',
       view: 'sneakers',
       number: '02',
-      title: 'SNEAKERS',
-      tagline: 'ENGINEERED TO MOVE',
-      description: 'Marathon racing carbon plates, supercritical NitroStrata™ cushioning, and anatomical lockdown cages.',
+      title: 'ZAPATILLAS',
+      tagline: 'DISEÑADAS PARA MOVERTE',
+      description: 'Modelos icónicos y deportivos de las marcas líderes: Nike, Adidas, New Balance, On Cloud y más.',
       image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop',
-      badge: 'PROPULSION LAB',
+      badge: 'CALZADO SELECTO',
       icon: Wind
     },
     {
@@ -43,10 +43,10 @@ export const CategoryGateway: React.FC = () => {
       view: 'perfumes',
       number: '03',
       title: 'PERFUMES',
-      tagline: 'THE SCENT OF MOVEMENT',
-      description: 'Sensorial luxury extraits de parfum capturing nocturnal adrenaline, cryo-fresh alpine air, and solar saffron.',
+      tagline: 'EL AROMA DE LA DISTINCIÓN',
+      description: 'Fragancias exclusivas de las mejores casas internacionales para hombre y mujer con larga duración.',
       image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop',
-      badge: 'HAUTE PARFUMERIE',
+      badge: 'ALTA PERFUMERÍA',
       icon: Sparkles
     }
   ];
@@ -59,14 +59,14 @@ export const CategoryGateway: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div>
             <span className="text-xs font-mono font-bold tracking-widest text-volt uppercase block mb-2">
-              04A // THREE UNIVERSES OF EXCELLENCE
+              04A // TRES CATEGORÍAS DE EXCELENCIA
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase tracking-tight text-white">
-              EXPLORE BY CATEGORY
+              EXPLORAR POR CATEGORÍA
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-white/50 max-w-md mt-4 md:mt-0 font-light">
-            Each category represents a standalone digital and technical experience engineered with absolute precision.
+            Encuentra lo mejor en ropa deportiva, calzado urbano y perfumes de lujo para cada ocasión.
           </p>
         </div>
 

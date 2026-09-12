@@ -8,34 +8,34 @@ export const HorizontalGallery: React.FC = () => {
 
   const galleryItems = [
     {
-      title: 'MARATHON CADENCE',
+      title: 'RITMO DE MARATÓN',
       category: 'RUNNING',
       image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1200&auto=format&fit=crop',
-      tagline: 'Sub-2 hour testing parameters'
+      tagline: 'Resistencia y velocidad continua'
     },
     {
-      title: 'ISOMETRIC TENSION',
-      category: 'TRAINING',
+      title: 'TENSIÓN ISOMÉTRICA',
+      category: 'ENTRENAMIENTO',
       image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
-      tagline: 'High-density poly-mesh compression'
+      tagline: 'Compresión textil de alta densidad'
     },
     {
-      title: 'PRECISION STRIKE',
-      category: 'FOOTBALL',
+      title: 'GOLPE PRECISO',
+      category: 'FÚTBOL',
       image: 'https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=1200&auto=format&fit=crop',
-      tagline: 'Micro-texture boot upper aerodynamics'
+      tagline: 'Control, tracción y dinamismo'
     },
     {
-      title: 'URBAN VELOCITY',
-      category: 'LIFESTYLE',
+      title: 'ESTILO URBANO',
+      category: 'MODA & CALLE',
       image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1200&auto=format&fit=crop',
-      tagline: 'Milanese minimalism meets high-tech'
+      tagline: 'Diseño vanguardista y confort total'
     },
     {
-      title: 'NOCTURNAL ALCHEMY',
-      category: 'FRAGRANCE',
+      title: 'ALQUIMIA NOCTURNA',
+      category: 'PERFUMERÍA',
       image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop',
-      tagline: 'Aura Noir 30% concentration'
+      tagline: 'Esencias profundas de alta fijación'
     }
   ];
 
@@ -55,10 +55,10 @@ export const HorizontalGallery: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 flex items-end justify-between">
         <div>
           <span className="text-xs font-mono font-bold tracking-widest text-volt uppercase block mb-2">
-            07 // EDITORIAL VISUAL ARCHIVE
+            07 // ARCHIVO VISUAL Y LOOKBOOK
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl uppercase tracking-tight text-white">
-            HORIZONTAL LOOKBOOK
+            CATÁLOGO VISUAL
           </h2>
         </div>
 

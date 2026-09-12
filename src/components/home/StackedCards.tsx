@@ -9,27 +9,27 @@ export const StackedCards: React.FC = () => {
   const cards = [
     {
       id: 0,
-      title: 'THE NITROGEN FORGE',
-      subtitle: 'Molecular foam expansion lab',
+      title: 'LA FORJA DE AMORTIGUACIÓN',
+      subtitle: 'Laboratorio de expansión molecular',
       image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop',
-      tag: 'MATERIAL LAB',
-      desc: 'Liquid nitrogen micro-injections create supercritical cell geometry that resists mechanical fatigue.'
+      tag: 'LABORATORIO MATERIALES',
+      desc: 'Microinyecciones de nitrógeno que generan una estructura celular supercrítica resistente a la fatiga mecánica.'
     },
     {
       id: 1,
-      title: 'AEROVENT COMPRESSION',
-      subtitle: '4-Way dynamic weave architecture',
+      title: 'COMPRESIÓN AEROVENT',
+      subtitle: 'Arquitectura de tejido elástico 4-Way',
       image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
-      tag: 'TEXTILE LAB',
-      desc: 'Micro-perforated airflow zones engineered precisely along the major muscle heat maps.'
+      tag: 'LABORATORIO TEXTIL',
+      desc: 'Zonas microperforadas de flujo de aire diseñadas estratégicamente siguiendo el mapa térmico muscular.'
     },
     {
       id: 2,
-      title: 'NOCTURNAL EXTRAIT',
-      subtitle: 'Rare resin maceration chamber',
+      title: 'EXTRACTO NOCTURNO',
+      subtitle: 'Cámara de maceración de esencias',
       image: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop',
-      tag: 'OLFACTORY LAB',
-      desc: 'Aged in darkened glass flacons for 90 days to achieve unforgettable magnetic projection.'
+      tag: 'LABORATORIO OLFATIVO',
+      desc: 'Macerado en frascos de cristal oscuro durante 90 días para lograr una estela y fijación magnética inconfundible.'
     }
   ];
 
@@ -41,13 +41,13 @@ export const StackedCards: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/5 border border-white/10">
             <Layers size={14} />
-            <span>08 // DEPTH CARD STACK LAB</span>
+            <span>08 // PILARES DE INNOVACIÓN</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
-            RESEARCH & ATELIER
+            INVESTIGACIÓN & TALLER
           </h2>
           <p className="text-xs sm:text-sm text-white/50 font-light">
-            Click to shuffle through our 3 specialized innovation divisions.
+            Haz clic para alternar entre nuestras 3 divisiones de innovación especializada.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export const StackedCards: React.FC = () => {
                   zIndex,
                   opacity
                 }}
-                data-cursor-text="SHUFFLE"
+                data-cursor-text="CAMBIAR"
               >
                 <img
                   src={card.image}
@@ -95,7 +95,7 @@ export const StackedCards: React.FC = () => {
                   <span className="px-3 py-1 rounded-full text-[10px] font-mono font-black uppercase bg-volt text-black shadow-[0_0_12px_#CCFF00]">
                     {card.tag}
                   </span>
-                  <span className="font-mono text-xs text-white/50">CLICK TO FLIP ↻</span>
+                  <span className="font-mono text-xs text-white/50">CLIC PARA GIRAR ↻</span>
                 </div>
 
                 <div className="relative z-10 max-w-xl space-y-3">

@@ -53,22 +53,22 @@ export const HeroSection: React.FC = () => {
           {/* Top Pill */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/15 text-volt font-mono text-xs font-bold tracking-widest uppercase shadow-[0_0_20px_rgba(204,255,0,0.2)]">
             <span className="w-2 h-2 rounded-full bg-volt animate-ping" />
-            <span>AUTUMN/WINTER PERFORMANCE LAB</span>
+            <span>NUEVA COLECCIÓN • ALTO RENDIMIENTO</span>
           </div>
 
           {/* Monumental Headline */}
           <div className="space-y-1">
             <h1 className="font-display font-black text-4xl sm:text-7xl lg:text-8xl tracking-tight text-white uppercase leading-[0.9]">
-              MOVE WITHOUT <br />
+              MOVIMIENTO SIN <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-volt via-white to-volt animate-pulse-glow">
-                LIMITS.
+                LÍMITES.
               </span>
             </h1>
           </div>
 
           {/* Subtext */}
           <p className="text-sm sm:text-lg text-white/80 max-w-2xl font-light leading-relaxed">
-            Performance engineered for those who refuse to stand still. High-compression seamless apparel, carbon-propulsion footwear, and sensorial luxury fragrances.
+            Ropa deportiva de máxima compresión, zapatillas de alto impacto y perfumería exclusiva seleccionada para quienes buscan distinción y rendimiento.
           </p>
 
           {/* CTAs */}
@@ -76,9 +76,9 @@ export const HeroSection: React.FC = () => {
             <button
               onClick={() => navigateTo('sportswear')}
               className="py-4 px-8 rounded-full bg-volt text-black font-mono font-black text-xs sm:text-sm uppercase tracking-wider hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(204,255,0,0.4)] flex items-center space-x-2 group"
-              data-cursor-text="EXPLORE"
+              data-cursor-text="EXPLORAR"
             >
-              <span>EXPLORE COLLECTION</span>
+              <span>EXPLORAR COLECCIÓN</span>
               <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
 
@@ -89,9 +89,9 @@ export const HeroSection: React.FC = () => {
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
               className="py-4 px-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-mono font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300"
-              data-cursor-text="DISCOVER"
+              data-cursor-text="CONOCER"
             >
-              DISCOVER ANISHA
+              CONOCER ANISHA
             </button>
           </div>
 

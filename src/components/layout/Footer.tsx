@@ -28,10 +28,10 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="font-mono text-xs text-volt font-bold uppercase tracking-widest">
-              MOVE WITHOUT LIMITS.
+              MOVIMIENTO SIN LÍMITES.
             </p>
             <p className="text-xs text-white/50 max-w-sm font-light leading-relaxed">
-              Performance engineered for those who refuse to stand still. Biomechanical compression, carbon-propulsion footwear, and sensory extrait de parfum.
+              Rendimiento diseñado para quienes se niegan a detenerse. Compresión biomecánica, calzado deportivo de propulsión y alta perfumería sensorial.
             </p>
           </div>
 

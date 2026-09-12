@@ -5,26 +5,26 @@ export const PerformanceMetrics: React.FC = () => {
   const metrics = [
     {
       value: '24/7',
-      label: 'KINETIC READINESS',
-      desc: 'All-weather thermal regulating weaves and adaptive compression.',
+      label: 'CONFORT ACTIVO',
+      desc: 'Tejidos de regulación térmica y compresión anatómica para todo el día.',
       icon: Clock
     },
     {
       value: '89.4%',
-      label: 'ENERGY RETURN',
-      desc: 'Tested and verified through supercritical nitrogen plate deflection.',
+      label: 'RETORNO DE ENERGÍA',
+      desc: 'Amortiguación probada que reduce el cansancio en cada paso.',
       icon: Activity
     },
     {
-      value: 'ZERO',
-      label: 'LIMITS ACCEPTED',
-      desc: 'Zero-seam ultrasonic welding eliminates friction points.',
+      value: 'CERO',
+      label: 'LÍMITES EN TU ESTILO',
+      desc: 'Prendas sin costuras molestas que eliminan cualquier punto de roce.',
       icon: Flame
     },
     {
       value: '100%',
-      label: 'CARBON PROVEN',
-      desc: 'Aerospace grade carbon fiber propulsion embedded in every racing silhouette.',
+      label: 'CALIDAD ASEGURADA',
+      desc: 'Selección rigurosa de materiales, acabados y empaques en cada producto.',
       icon: ShieldCheck
     }
   ];

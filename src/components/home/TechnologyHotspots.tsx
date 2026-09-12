@@ -9,42 +9,42 @@ export const TechnologyHotspots: React.FC = () => {
   const hotspots = [
     {
       id: 0,
-      title: '01 // LIGHTWEIGHT MONOMESH',
+      title: '01 // MALLA ULTRA LIGERA',
       position: { top: '32%', left: '26%' },
       metric: '188g',
-      desc: 'Single-layer engineered AeroKnit™ upper eliminates internal overlays while maintaining strict anatomical lockdown.',
+      desc: 'Tejido transpirable de una sola capa que elimina costuras internas y brinda ajuste anatómico.',
       icon: Wind
     },
     {
       id: 1,
-      title: '02 // CARBON PROPULSION PLATE',
+      title: '02 // PLACA DE PROPULSIÓN',
       position: { top: '64%', left: '50%' },
-      metric: '89.4% Return',
-      desc: '3D curved full-length aerospace carbon fiber plate calibrated for explosive toe-off kinetic propulsion.',
+      metric: '89.4% Retorno',
+      desc: 'Estructura curvada de fibra de carbono para una pisada reactiva y despegue explosivo.',
       icon: Zap
     },
     {
       id: 2,
-      title: '03 // NITROSTRATA™ MIDSOLE',
+      title: '03 // SUELA AMORTIGUADA',
       position: { top: '55%', left: '74%' },
-      metric: '39mm Stack',
-      desc: 'Supercritical nitrogen-infused foam offering cloud-like shock absorption with zero packing degradation.',
+      metric: '39mm Perfil',
+      desc: 'Espuma técnica de alta densidad que absorbe el impacto protegiendo las articulaciones.',
       icon: Activity
     },
     {
       id: 3,
-      title: '04 // LIQUID-RUBBER TRACTION',
+      title: '04 // TRACCIÓN ANTIDESLIZANTE',
       position: { top: '80%', left: '30%' },
-      metric: '100% Grip',
-      desc: 'Micro-siped organic tread pattern providing relentless traction on wet asphalt and competitive tracks.',
+      metric: '100% Agarre',
+      desc: 'Patrón de goma texturizada que proporciona agarre seguro sobre cualquier superficie urbana.',
       icon: Shield
     },
     {
       id: 4,
-      title: '05 // ERGONOMIC HEEL CAGE',
+      title: '05 // TALÓN ERGONÓMICO',
       position: { top: '40%', left: '80%' },
-      metric: 'Zero Slip',
-      desc: 'Thermoplastic polyurethane rear collar lock that prevents heel friction and Achilles tendon fatigue.',
+      metric: 'Cero Fricción',
+      desc: 'Soporte reforzado en el talón que previene roces y mantiene el pie en su eje natural.',
       icon: Cpu
     }
   ];
@@ -63,13 +63,13 @@ export const TechnologyHotspots: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10">
             <Cpu size={14} />
-            <span>06 // INTERACTIVE TECHNOLOGY & BIOMECHANICS</span>
+            <span>06 // TECNOLOGÍA & ANATOMÍA DEL CALZADO</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
-            EXPLODED LAB ARCHITECTURE
+            ARQUITECTURA DE RENDIMIENTO
           </h2>
           <p className="text-xs sm:text-sm text-white/60 font-light">
-            Click on any kinetic hotspot to reveal the aerospace engineering integrated into every pair of ANISHA Velocity X.
+            Toca cualquiera de los puntos interactivos para descubrir los detalles constructivos de cada silueta en ANISHA SPORT.
           </p>
         </div>
 
