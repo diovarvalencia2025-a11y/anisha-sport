@@ -65,22 +65,22 @@ export const SportswearPage: React.FC = () => {
     <div className="min-h-screen bg-background text-white pt-24 pb-32 animate-fadeIn">
       
       {/* 01 // SPORTSWEAR HERO BANNER */}
-      <section className="relative h-[50vh] sm:h-[58vh] min-h-[440px] max-h-[560px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
-        {/* Contenedor de la imagen enmarcado a la derecha para escala natural sin cortes */}
-        <div className="absolute inset-y-0 right-0 w-full md:w-[75%] lg:w-[60%] xl:w-[55%] overflow-hidden pointer-events-none">
+      <section className="relative h-[52vh] sm:h-[62vh] min-h-[460px] max-h-[600px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
+        {/* Foto de fondo completa del gimnasio */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
             src="./images/hero/hero-sportswear.png"
             alt="ANISHA Ropa Deportiva"
-            className="w-full h-full object-cover object-[right_top] md:object-[90%_15%] filter brightness-[1] contrast-[1.05]"
+            className="w-full h-full object-cover object-[82%_15%] sm:object-[80%_20%] md:object-[78%_25%] filter brightness-[1.02] contrast-[1.04]"
           />
-          {/* Difuminado suave izquierdo del marco de la imagen hacia el fondo negro */}
-          <div className="absolute inset-y-0 left-0 w-1/3 md:w-1/2 bg-gradient-to-r from-[#070707] via-[#070707]/75 to-transparent" />
         </div>
 
-        {/* Degradado general de izquierda a derecha para contraste de texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-[#070707]/90 md:via-[#070707]/40 to-transparent pointer-events-none" />
+        {/* Degradado negro de izquierda a derecha: oscuro a la izquierda para el texto y difuminándose totalmente a la derecha para nitidez total */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-[#070707]/80 md:via-[#070707]/50 via-40% to-transparent to-85% pointer-events-none" />
+        {/* Refuerzo sutil inferior en móviles para legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/80 via-transparent to-transparent md:hidden pointer-events-none" />
         {/* Sutil fundido inferior con el fondo */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent pointer-events-none" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
