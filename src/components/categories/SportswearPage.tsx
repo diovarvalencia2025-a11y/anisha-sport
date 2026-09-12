@@ -65,13 +65,13 @@ export const SportswearPage: React.FC = () => {
     <div className="min-h-screen bg-background text-white pt-24 pb-32 animate-fadeIn">
       
       {/* 01 // SPORTSWEAR HERO BANNER */}
-      <section className="relative h-[56vh] sm:h-[66vh] min-h-[500px] max-h-[640px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
+      <section className="relative h-[52vh] sm:h-[60vh] min-h-[460px] max-h-[580px] w-full overflow-hidden flex items-center pt-8 pb-6 sm:pt-10 sm:pb-8 bg-[#070707]">
         {/* Foto de fondo completa del gimnasio */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
             src="./images/hero/hero-sportswear.png"
             alt="ANISHA Ropa Deportiva"
-            className="w-full h-full object-cover object-[82%_top] sm:object-[80%_top] md:object-[78%_top] filter brightness-[1.02] contrast-[1.04]"
+            className="w-full h-full object-cover object-[82%_5%] sm:object-[80%_4%] md:object-[78%_4%] filter brightness-[1.02] contrast-[1.04]"
           />
         </div>
 
@@ -80,7 +80,7 @@ export const SportswearPage: React.FC = () => {
         {/* Refuerzo sutil inferior en móviles para legibilidad */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/80 via-transparent to-transparent md:hidden pointer-events-none" />
         {/* Sutil fundido inferior con el fondo */}
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-background to-transparent pointer-events-none" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
