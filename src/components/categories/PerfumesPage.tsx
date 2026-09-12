@@ -80,11 +80,11 @@ export const PerfumesPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
             <Sparkles size={14} />
-            <span>CATEGORY 03 // HAUTE PARFUMERIE & ESSENCES</span>
+            <span>CATEGORÍA 03 // ALTA PERFUMERÍA & ESENCIAS</span>
           </div>
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-none">
-            THE SCENT OF <br />
-            <span className="text-volt">DISTINCTION.</span>
+            EL AROMA DE LA <br />
+            <span className="text-volt">DISTINCIÓN.</span>
           </h1>
           <p className="text-xs sm:text-sm text-white/70 max-w-xl font-light">
             Colección de perfumes y fragancias de alta gama: Carolina Herrera, Giorgio Armani, Gucci, Moschino, Orientica, Lattafa y Paris Hilton.

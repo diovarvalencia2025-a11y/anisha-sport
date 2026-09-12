@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Eye, Star, MessageSquare } from 'lucide-react';
+import { Eye, Star, MessageSquare } from 'lucide-react';
 import { Product } from '../../data/products';
 import { useCart } from '../../context/CartContext';
 import { useNavigation } from '../../context/NavigationContext';
@@ -10,31 +10,20 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) => {
-  const { addToCart, formatPrice, generateProductInquiryUrl } = useCart();
+  const { generateProductInquiryUrl } = useCart();
   const { openProductDetail, playUiSound } = useNavigation();
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [addedAnimation, setAddedAnimation] = useState(false);
 
   const currentColor = product.colors[selectedColorIndex] || product.colors[0];
   const primaryImage = currentColor?.image || product.images[0];
   const secondaryImage = product.images[1] || primaryImage;
 
-  const isNoPriceCategory = product.category === 'sneakers' || product.category === 'perfumes';
-
   const handleAction = (e: React.MouseEvent) => {
     e.stopPropagation();
     playUiSound('pop');
-
-    if (isNoPriceCategory) {
-      const url = generateProductInquiryUrl(product.name, `Tono/Color: ${currentColor.name}`);
-      window.open(url, '_blank');
-      return;
-    }
-
-    addToCart(product, currentColor.name, product.sizes[0], 1);
-    setAddedAnimation(true);
-    setTimeout(() => setAddedAnimation(false), 1200);
+    const url = generateProductInquiryUrl(product.name, `Tono/Color: ${currentColor.name}`);
+    window.open(url, '_blank');
   };
 
   const handleConsultClick = (e: React.MouseEvent) => {
@@ -86,22 +75,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, featured = fa
           <div className="flex items-center space-x-2 w-full">
             <button
               onClick={handleAction}
-              className={`flex-1 py-2.5 px-3 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-300 ${
-                addedAnimation
-                  ? 'bg-volt text-black shadow-[0_0_20px_#CCFF00]'
-                  : isNoPriceCategory
-                  ? 'bg-volt text-black hover:bg-white shadow-[0_0_15px_rgba(204,255,0,0.3)]'
-                  : 'bg-white text-black hover:bg-volt'
-              }`}
+              className="flex-1 py-2.5 px-3 rounded-xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-300 bg-volt text-black hover:bg-white shadow-[0_0_15px_rgba(204,255,0,0.3)]"
             >
-              {isNoPriceCategory ? <MessageSquare size={14} /> : <ShoppingBag size={14} />}
-              <span>
-                {addedAnimation
-                  ? 'AÑADIDO ✓'
-                  : isNoPriceCategory
-                  ? 'CONSULTAR WHATSAPP'
-                  : 'AÑADIR'}
-              </span>
+              <MessageSquare size={14} />
+              <span>CONSULTAR WHATSAPP</span>
             </button>
             <button
               onClick={(e) => {
@@ -137,7 +114,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, featured = fa
           </p>
         </div>
 
-        {/* COLOR SWATCHES & PRICE / CONSULTAR */}
+        {/* COLOR SWATCHES & CONSULTAR */}
         <div className="pt-3 border-t border-white/5 flex items-center justify-between">
           
           {/* Color Selector */}
@@ -160,22 +137,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, featured = fa
             ))}
           </div>
 
-          {/* Price or Consultation Tag */}
+          {/* Consultation Tag */}
           <div className="text-right">
-            {isNoPriceCategory ? (
-              <button
-                onClick={handleConsultClick}
-                className="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-volt/10 text-volt border border-volt/30 hover:bg-volt hover:text-black transition-all shadow-[0_0_10px_rgba(204,255,0,0.15)] flex items-center space-x-1"
-                title="Consultar precio y disponibilidad por WhatsApp"
-              >
-                <MessageSquare size={11} />
-                <span>CONSULTAR</span>
-              </button>
-            ) : (
-              <span className="font-mono font-extrabold text-base text-white">
-                {formatPrice(product.priceEUR, product.priceUSD, product.priceCOP)}
-              </span>
-            )}
+            <button
+              onClick={handleConsultClick}
+              className="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-volt/10 text-volt border border-volt/30 hover:bg-volt hover:text-black transition-all shadow-[0_0_10px_rgba(204,255,0,0.15)] flex items-center space-x-1"
+              title="Consultar disponibilidad por WhatsApp"
+            >
+              <MessageSquare size={11} />
+              <span>CONSULTAR</span>
+            </button>
           </div>
         </div>
       </div>

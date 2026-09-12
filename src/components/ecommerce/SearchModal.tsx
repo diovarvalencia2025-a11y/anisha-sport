@@ -6,7 +6,7 @@ import { useCart } from '../../context/CartContext';
 
 export const SearchModal: React.FC = () => {
   const { isSearchOpen, setIsSearchOpen, openProductDetail, playUiSound } = useNavigation();
-  const { formatPrice, generateProductInquiryUrl } = useCart();
+  const { generateProductInquiryUrl } = useCart();
   const [query, setQuery] = useState('');
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<'all' | 'sportswear' | 'sneakers' | 'perfumes'>('all');
 
@@ -126,7 +126,6 @@ export const SearchModal: React.FC = () => {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-12">
               {filteredProducts.map(p => {
-                const isNoPrice = p.category === 'sneakers' || p.category === 'perfumes';
                 return (
                   <div
                     key={p.id}
@@ -147,24 +146,18 @@ export const SearchModal: React.FC = () => {
                         {p.name}
                       </h4>
                       <div className="flex items-center justify-between mt-2">
-                        {isNoPrice ? (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              playUiSound('pop');
-                              window.open(generateProductInquiryUrl(p.name), '_blank');
-                            }}
-                            className="font-mono font-bold text-[11px] text-volt bg-volt/10 hover:bg-volt hover:text-black px-2 py-0.5 rounded border border-volt/30 transition-colors flex items-center space-x-1"
-                            title="Consultar por WhatsApp"
-                          >
-                            <MessageSquare size={10} />
-                            <span>CONSULTAR</span>
-                          </button>
-                        ) : (
-                          <span className="font-mono font-bold text-xs text-white">
-                            {formatPrice(p.priceEUR, p.priceUSD, p.priceCOP)}
-                          </span>
-                        )}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            playUiSound('pop');
+                            window.open(generateProductInquiryUrl(p.name), '_blank');
+                          }}
+                          className="font-mono font-bold text-[11px] text-volt bg-volt/10 hover:bg-volt hover:text-black px-2 py-0.5 rounded border border-volt/30 transition-colors flex items-center space-x-1"
+                          title="Consultar por WhatsApp"
+                        >
+                          <MessageSquare size={10} />
+                          <span>CONSULTAR</span>
+                        </button>
                         <span className="text-[10px] font-mono text-white/50 flex items-center space-x-0.5">
                           <Star size={10} className="text-volt fill-volt" />
                           <span>{p.rating.toFixed(1)}</span>

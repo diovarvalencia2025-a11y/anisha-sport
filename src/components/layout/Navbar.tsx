@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Search, Volume2, VolumeX, Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Search, Volume2, VolumeX, Menu, X, ArrowUpRight, Sparkles, MessageSquare } from 'lucide-react';
 import { useNavigation, ViewType } from '../../context/NavigationContext';
-import { useCart, Currency } from '../../context/CartContext';
+import { useCart } from '../../context/CartContext';
 
 export const Navbar: React.FC = () => {
   const { activeView, navigateTo, toggleSearch, isMobileMenuOpen, toggleMobileMenu, soundEnabled, toggleSound, playUiSound } = useNavigation();
-  const { totalItems, toggleCart, currency, setCurrency } = useCart();
+  const { generateProductInquiryUrl } = useCart();
   const [scrolled, setScrolled] = useState(false);
-  const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,39 +84,6 @@ export const Navbar: React.FC = () => {
           {/* RIGHT: CONTROLS & ACTIONS */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             
-            {/* Currency Selector */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  playUiSound('click');
-                  setCurrencyMenuOpen(!currencyMenuOpen);
-                }}
-                className="px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-volt/50 transition-colors flex items-center space-x-1"
-                title="Cambiar Moneda"
-              >
-                <span>{currency}</span>
-              </button>
-              {currencyMenuOpen && (
-                <div className="absolute right-0 mt-2 w-24 py-1 rounded-xl bg-surface-elevated border border-surface-border shadow-2xl z-50 backdrop-blur-xl">
-                  {(['EUR', 'USD', 'COP'] as Currency[]).map(curr => (
-                    <button
-                      key={curr}
-                      onClick={() => {
-                        setCurrency(curr);
-                        setCurrencyMenuOpen(false);
-                        playUiSound('click');
-                      }}
-                      className={`w-full text-left px-3 py-1.5 text-xs font-mono font-medium transition-colors ${
-                        currency === curr ? 'text-volt bg-white/5 font-bold' : 'text-white/70 hover:text-white hover:bg-white/10'
-                      }`}
-                    >
-                      {curr}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {/* Sound FX Toggle */}
             <button
               onClick={toggleSound}
@@ -137,21 +103,17 @@ export const Navbar: React.FC = () => {
               <Search size={18} />
             </button>
 
-            {/* Shopping Bag Button */}
+            {/* WhatsApp Consultation Button */}
             <button
               onClick={() => {
                 playUiSound('pop');
-                toggleCart();
+                window.open(generateProductInquiryUrl(), '_blank');
               }}
-              className="relative group p-2.5 rounded-full bg-white text-black hover:bg-volt transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(204,255,0,0.5)] flex items-center justify-center"
-              data-cursor-text="BOLSA"
+              className="relative group p-2.5 rounded-full bg-[#25D366] text-white hover:bg-white hover:text-[#25D366] transition-all duration-300 shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_25px_rgba(204,255,0,0.5)] flex items-center justify-center"
+              title="Asesoría directa por WhatsApp (3127063972)"
+              data-cursor-text="WHATSAPP"
             >
-              <ShoppingBag size={18} className="transition-transform group-hover:scale-110" />
-              {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-crimson text-white font-mono text-[10px] font-black flex items-center justify-center border-2 border-background animate-bounce">
-                  {totalItems}
-                </span>
-              )}
+              <MessageSquare size={18} className="transition-transform group-hover:scale-110" />
             </button>
 
             {/* Mobile Menu Trigger */}
@@ -191,21 +153,16 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="space-y-4 pt-6 border-t border-white/10">
-            <div className="flex items-center justify-between text-xs text-white/60">
-              <span>MONEDA:</span>
-              <div className="flex space-x-2">
-                {(['EUR', 'USD', 'COP'] as Currency[]).map(c => (
-                  <button
-                    key={c}
-                    onClick={() => setCurrency(c)}
-                    className={`px-2 py-0.5 rounded font-mono ${currency === c ? 'bg-volt text-black font-bold' : 'text-white/60'}`}
-                  >
-                    {c}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-white/40 tracking-wider">
+            <button
+              onClick={() => {
+                window.open(generateProductInquiryUrl(), '_blank');
+              }}
+              className="w-full py-3 px-4 rounded-xl bg-[#25D366] text-white font-mono font-bold text-xs uppercase flex items-center justify-center space-x-2"
+            >
+              <MessageSquare size={16} />
+              <span>CONSULTAS WHATSAPP: 3127063972</span>
+            </button>
+            <p className="text-xs text-white/40 tracking-wider text-center">
               ANISHA SPORT © 2026 — MOVIMIENTO SIN LÍMITES
             </p>
           </div>

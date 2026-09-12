@@ -14,6 +14,7 @@ export interface CategorySidebarProps {
   isMobileOpen: boolean;
   onCloseMobile: () => void;
   showUnisex?: boolean;
+  groupTitle?: string;
 }
 
 export const CategorySidebar: React.FC<CategorySidebarProps> = ({
@@ -28,7 +29,8 @@ export const CategorySidebar: React.FC<CategorySidebarProps> = ({
   filteredCount,
   isMobileOpen,
   onCloseMobile,
-  showUnisex = false
+  showUnisex = false,
+  groupTitle = 'MARCAS'
 }) => {
   const [isBrandsOpen, setIsBrandsOpen] = useState(true);
 
@@ -118,7 +120,7 @@ export const CategorySidebar: React.FC<CategorySidebarProps> = ({
           className="w-full flex items-center justify-between py-1 text-left group"
         >
           <span className="font-display font-bold text-sm tracking-wide text-white uppercase group-hover:text-volt transition-colors">
-            MARCAS
+            {groupTitle}
           </span>
           {isBrandsOpen ? (
             <ChevronUp size={16} className="text-white/60 group-hover:text-volt transition-colors" />

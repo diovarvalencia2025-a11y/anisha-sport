@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { X, Star, ShoppingBag, ShieldCheck, Truck, RotateCcw, Check, Sparkles, MessageSquare, Zap } from 'lucide-react';
+import { X, Star, ShieldCheck, Truck, RotateCcw, Check, Sparkles, MessageSquare, Zap } from 'lucide-react';
 import { Product, PRODUCTS } from '../../data/products';
 import { useNavigation } from '../../context/NavigationContext';
 import { useCart } from '../../context/CartContext';
 
 export const ProductDetailModal: React.FC = () => {
   const { selectedProductForDetail, closeProductDetail, openProductDetail, playUiSound } = useNavigation();
-  const { addToCart, formatPrice, generateProductInquiryUrl } = useCart();
+  const { generateProductInquiryUrl } = useCart();
 
   const product = selectedProductForDetail;
 
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string>('');
-  const [addedAnimation, setAddedAnimation] = useState(false);
 
   if (!product) return null;
 
@@ -26,19 +25,7 @@ export const ProductDetailModal: React.FC = () => {
     window.open(url, '_blank');
   };
 
-  const handleAddToCart = () => {
-    playUiSound('pop');
-    addToCart(product, currentColor.name, activeSize, 1);
-    setAddedAnimation(true);
-    setTimeout(() => {
-      setAddedAnimation(false);
-      closeProductDetail();
-    }, 900);
-  };
-
   const relatedProducts = PRODUCTS.filter(p => p.id !== product.id && p.category === product.category).slice(0, 3);
-
-  const isNoPrice = product.category === 'sneakers' || product.category === 'perfumes';
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/95 backdrop-blur-2xl p-3 sm:p-6 lg:p-12 flex items-center justify-center animate-fadeIn">
@@ -122,20 +109,14 @@ export const ProductDetailModal: React.FC = () => {
                   {product.subtitle}
                 </p>
                 <div className="mt-3">
-                  {isNoPrice ? (
-                    <button
-                      onClick={handleWhatsAppConsultation}
-                      className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-volt/10 border border-volt/40 text-volt hover:bg-volt hover:text-black font-mono text-xs sm:text-sm font-bold tracking-wider uppercase transition-all shadow-[0_0_15px_rgba(204,255,0,0.2)] cursor-pointer"
-                      title="Haz clic para consultar por WhatsApp directamente"
-                    >
-                      <MessageSquare size={15} />
-                      <span>PRECIO A CONSULTAR • VÍA WHATSAPP</span>
-                    </button>
-                  ) : (
-                    <div className="font-mono font-black text-2xl sm:text-3xl text-white">
-                      {formatPrice(product.priceEUR, product.priceUSD, product.priceCOP)}
-                    </div>
-                  )}
+                  <button
+                    onClick={handleWhatsAppConsultation}
+                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-volt/10 border border-volt/40 text-volt hover:bg-volt hover:text-black font-mono text-xs sm:text-sm font-bold tracking-wider uppercase transition-all shadow-[0_0_15px_rgba(204,255,0,0.2)] cursor-pointer"
+                    title="Haz clic para consultar por WhatsApp directamente"
+                  >
+                    <MessageSquare size={15} />
+                    <span>PRECIO A CONSULTAR • VÍA WHATSAPP</span>
+                  </button>
                 </div>
               </div>
 
@@ -257,41 +238,13 @@ export const ProductDetailModal: React.FC = () => {
 
             {/* ACTION BUTTONS */}
             <div className="space-y-3 pt-4 border-t border-surface-border">
-              {isNoPrice ? (
-                <div className="space-y-2">
-                  <button
-                    onClick={handleWhatsAppConsultation}
-                    className="w-full py-4 px-6 rounded-2xl font-mono text-xs font-black uppercase tracking-wider flex items-center justify-center space-x-2 bg-volt text-black hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(204,255,0,0.4)] cursor-pointer"
-                  >
-                    <MessageSquare size={17} />
-                    <span>CONSULTAR DISPONIBILIDAD POR WHATSAPP</span>
-                  </button>
-
-                  <button
-                    onClick={handleAddToCart}
-                    className="w-full py-3 px-6 rounded-2xl font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 bg-white/10 text-white hover:bg-white/20 border border-white/10 transition-colors"
-                  >
-                    <ShoppingBag size={15} />
-                    <span>{addedAnimation ? 'AÑADIDO A LA BOLSA ✓' : 'AÑADIR A LA BOLSA (GUARDAR)'}</span>
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={handleAddToCart}
-                  className={`w-full py-4 px-6 rounded-2xl font-mono text-xs font-black uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-300 ${
-                    addedAnimation
-                      ? 'bg-volt text-black shadow-[0_0_30px_#CCFF00]'
-                      : 'bg-white text-black hover:bg-volt hover:shadow-[0_0_25px_rgba(204,255,0,0.4)]'
-                  }`}
-                >
-                  <ShoppingBag size={16} />
-                  <span>
-                    {addedAnimation
-                      ? 'AÑADIDO AL PEDIDO ✓'
-                      : `AÑADIR A LA BOLSA • ${formatPrice(product.priceEUR, product.priceUSD, product.priceCOP)}`}
-                  </span>
-                </button>
-              )}
+              <button
+                onClick={handleWhatsAppConsultation}
+                className="w-full py-4 px-6 rounded-2xl font-mono text-xs font-black uppercase tracking-wider flex items-center justify-center space-x-2 bg-volt text-black hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(204,255,0,0.4)] cursor-pointer"
+              >
+                <MessageSquare size={17} />
+                <span>CONSULTAR DISPONIBILIDAD POR WHATSAPP</span>
+              </button>
 
               <div className="grid grid-cols-3 gap-2 text-[10px] font-mono text-white/50 text-center pt-2">
                 <div className="flex flex-col items-center"><Truck size={14} className="text-volt mb-1" /><span>Envío Exprés</span></div>
@@ -311,24 +264,22 @@ export const ProductDetailModal: React.FC = () => {
               COMPLETA TU ESTILO & RENDIMIENTO
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {relatedProducts.map(rel => {
-                const isRelNoPrice = rel.category === 'sneakers' || rel.category === 'perfumes';
-                return (
-                  <div
-                    key={rel.id}
-                    onClick={() => openProductDetail(rel)}
-                    className="p-2.5 rounded-xl bg-surface border border-surface-border hover:border-volt/50 transition-all flex items-center space-x-3 cursor-pointer"
-                  >
-                    <img src={rel.images[0]} alt={rel.name} className="w-12 h-14 object-cover rounded-lg bg-black" />
-                    <div className="min-w-0">
-                      <h5 className="font-display font-bold text-xs text-white truncate">{rel.name}</h5>
-                      <span className="font-mono text-[11px] text-volt">
-                        {isRelNoPrice ? 'CONSULTAR' : formatPrice(rel.priceEUR, rel.priceUSD, rel.priceCOP)}
-                      </span>
-                    </div>
+              {relatedProducts.map(rel => (
+                <div
+                  key={rel.id}
+                  onClick={() => openProductDetail(rel)}
+                  className="p-2.5 rounded-xl bg-surface border border-surface-border hover:border-volt/50 transition-all flex items-center space-x-3 cursor-pointer"
+                >
+                  <img src={rel.images[0]} alt={rel.name} className="w-12 h-14 object-cover rounded-lg bg-black" />
+                  <div className="min-w-0">
+                    <h5 className="font-display font-bold text-xs text-white truncate">{rel.name}</h5>
+                    <span className="font-mono text-[11px] text-volt flex items-center space-x-1">
+                      <MessageSquare size={11} />
+                      <span>CONSULTAR</span>
+                    </span>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         )}

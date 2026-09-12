@@ -47,133 +47,608 @@ export interface Product {
 
 export const PRODUCTS: Product[] = [
   // ==================== ROPA DEPORTIVA (SPORTSWEAR) ====================
+  // --- PIJAMAS (DAMA) ---
   {
-    id: 'sp-01',
-    name: 'ANISHA Apex Seamless Set',
-    slug: 'anisha-apex-seamless-set',
-    subtitle: 'Conjunto de compresión y alto rendimiento para entrenamiento',
+    id: 'sp-pij-01',
+    name: 'Pijama Dama Satín Luxury',
+    slug: 'pijama-dama-satin-luxury',
+    subtitle: 'Conjunto de pijama en satín suave y fresco de alta comodidad',
+    category: 'sportswear',
+    subcategory: 'Pijamas',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    isFeatured: true,
+    rating: 4.9,
+    reviewsCount: 88,
+    badge: 'CONFORT TOTAL',
+    description: 'Confeccionada con suave tejido de satín ligero y fresco. Ideal para descanso con tacto sedoso sobre la piel y caída elegante.',
+    techSpecs: [
+      'Tejido satín ultrasuave al tacto',
+      'Corte holgado de máxima comodidad',
+      'Costuras reforzadas de confort',
+      'Transpirable y fresca para descanso'
+    ],
+    materials: ['95% Satín sedoso', '5% Elastano'],
+    colors: [
+      { name: 'Rosa Pastel', hex: '#E8A598', image: './images/ropa/pijamas/pijama-dama-01.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pijamas/pijama-dama-01.jpg']
+  },
+  {
+    id: 'sp-pij-02',
+    name: 'Pijama Dama Soft Comfort',
+    slug: 'pijama-dama-soft-comfort',
+    subtitle: 'Pijama ligera de dos piezas con acabado sedoso para descanso',
+    category: 'sportswear',
+    subcategory: 'Pijamas',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isBestSeller: true,
+    rating: 4.8,
+    reviewsCount: 65,
+    badge: 'MÁS VENDIDA',
+    description: 'Diseño contemporáneo femenino con acabado sedoso que abraza el cuerpo sin ceñir, permitiendo ventilación continua toda la noche.',
+    techSpecs: [
+      'Diseño contemporáneo femenino',
+      'Tejido antirozaduras hipoalergénico',
+      'Elástico suave en cintura',
+      'Fácil secado y cuidado'
+    ],
+    materials: ['92% Poliéster suave', '8% Spandex'],
+    colors: [
+      { name: 'Negro Elegance', hex: '#1C1C1C', image: './images/ropa/pijamas/pijama-dama-02.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pijamas/pijama-dama-02.jpg']
+  },
+  {
+    id: 'sp-pij-03',
+    name: 'Pijama Dama Algodón Relax',
+    slug: 'pijama-dama-algodon-relax',
+    subtitle: 'Conjunto de dormir y descanso en suave algodón premium',
+    category: 'sportswear',
+    subcategory: 'Pijamas',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.9,
+    reviewsCount: 72,
+    badge: 'ALGODÓN PURA SUAVIDAD',
+    description: 'Conjunto de descanso en algodón peinado natural que aporta frescura en cualquier clima, con pretina elástica anatómica.',
+    techSpecs: [
+      '100% Algodón de tacto suave',
+      'Ajuste relajado ergonómico',
+      'Pretina elástica de ajuste gentil',
+      'Resistente a lavados frecuentes'
+    ],
+    materials: ['100% Algodón peinado'],
+    colors: [
+      { name: 'Azul Noche', hex: '#1E293B', image: './images/ropa/pijamas/pijama-dama-03.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pijamas/pijama-dama-03.jpg']
+  },
+  {
+    id: 'sp-pij-04',
+    name: 'Pijama Dama Sweet Dreams',
+    slug: 'pijama-dama-sweet-dreams',
+    subtitle: 'Conjunto fresco y juvenil de dos piezas para descanso',
+    category: 'sportswear',
+    subcategory: 'Pijamas',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    rating: 4.7,
+    reviewsCount: 54,
+    badge: 'NUEVA COLECCIÓN',
+    description: 'Silueta juvenil y cómoda con detalles femeninos delicados. Confeccionada para quienes buscan ligereza total al descansar.',
+    techSpecs: [
+      'Diseño juvenil de descanso',
+      'Tejido elástico y fresco',
+      'Libertad de movimiento absoluta',
+      'Cero sensación térmica pesada'
+    ],
+    materials: ['95% Algodón modal', '5% Elastano'],
+    colors: [
+      { name: 'Rosa Suave', hex: '#FDF2F8', image: './images/ropa/pijamas/pijama-dama-04.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pijamas/pijama-dama-04.jpg']
+  },
+
+  // --- CONJUNTOS & LICRAS (DAMA) ---
+  {
+    id: 'sp-lic-01',
+    name: 'Conjunto Deportivo Seamless Dama',
+    slug: 'conjunto-deportivo-seamless-dama',
+    subtitle: 'Top deportivo y licra de compresión de alta sujeción',
     category: 'sportswear',
     subcategory: 'Conjuntos & Licras',
     brand: 'ANISHA',
     gender: 'women',
-    priceEUR: 165,
-    priceUSD: 180,
-    priceCOP: 720000,
-    isNew: true,
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
     isFeatured: true,
+    isNew: true,
     rating: 4.9,
-    reviewsCount: 142,
-    badge: 'NUEVO',
-    description: 'Fabricado con nuestro tejido elástico AeroVent™ en 4 direcciones. Proporciona compresión muscular focalizada, zonas de microventilación y ajuste sin rozaduras.',
+    reviewsCount: 130,
+    badge: 'MÁXIMA COMPRESIÓN',
+    description: 'Tejido tubular sin costuras que moldea la figura y ofrece compresión graduada para entrenamientos de alta intensidad.',
     techSpecs: [
-      'Compresión elástica AeroVent™ 4-Way',
-      'Tecnología antibacteriana y antiolor',
-      'Ventilación microperforada por zonas',
-      'Secado rápido hidrofóbico'
+      'Tejido sin costuras Seamless 4-Way',
+      'Cintura alta con soporte compresivo',
+      'Microventilación focalizada',
+      'Control de abdomen y realce natural'
     ],
     materials: ['78% Poliamida reciclada', '22% Elastano'],
     colors: [
-      { name: 'Negro Obsidiana', hex: '#0D0D0D', image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop' },
-      { name: 'Volt Cyber', hex: '#CCFF00', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop' }
-    ],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    images: [
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop'
-    ]
-  },
-  {
-    id: 'sp-02',
-    name: 'ANISHA Carbon Pro Hoodie',
-    slug: 'anisha-carbon-pro-hoodie',
-    subtitle: 'Chaqueta deportiva térmica con capucha cortavientos',
-    category: 'sportswear',
-    subcategory: 'Chaquetas & Buzos',
-    brand: 'ANISHA',
-    gender: 'men',
-    priceEUR: 140,
-    priceUSD: 155,
-    priceCOP: 620000,
-    isBestSeller: true,
-    rating: 4.8,
-    reviewsCount: 98,
-    badge: 'MÁS VENDIDO',
-    description: 'Diseño estructural creado para calentamiento y entrenamientos en mañanas frías. Cuenta con capucha ergonómica, cremalleras impermeables termoselladas y mangas articuladas.',
-    techSpecs: [
-      'Aislamiento térmico ThermoShield™',
-      'Cremalleras impermeables termoselladas',
-      'Mangas con articulación anatómica',
-      'Detalles reflectantes de seguridad'
-    ],
-    materials: ['65% Algodón orgánico', '35% Felpa técnica reciclada'],
-    colors: [
-      { name: 'Negro Carbón', hex: '#1A1A1A', image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop' }
-    ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    images: [
-      'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop'
-    ]
-  },
-  {
-    id: 'sp-03',
-    name: 'ANISHA Kinetic Speed Crop Top',
-    slug: 'anisha-kinetic-speed-crop-top',
-    subtitle: 'Top deportivo aerodinámico de alta sujeción',
-    category: 'sportswear',
-    subcategory: 'Tops & Camisetas',
-    brand: 'ANISHA',
-    gender: 'women',
-    priceEUR: 75,
-    priceUSD: 85,
-    priceCOP: 340000,
-    isNew: true,
-    rating: 4.7,
-    reviewsCount: 76,
-    badge: 'ESENCIAL FITNESS',
-    description: 'Silueta deportiva minimalista con costuras planas antirozaduras, banda elástica inferior de alto soporte y tirantes cruzados transpirables en la espalda.',
-    techSpecs: [
-      'Tejido transpirable AeroDry',
-      'Costuras planas libres de fricción',
-      'Banda elástica de soporte firme'
-    ],
-    materials: ['75% Poliéster', '25% Lycra'],
-    colors: [
-      { name: 'Volt Neón', hex: '#CCFF00', image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop' }
+      { name: 'Gris Carbón', hex: '#374151', image: './images/ropa/conjuntos-licras/conjunto-licra-dama-01.webp' }
     ],
     sizes: ['XS', 'S', 'M', 'L'],
-    images: [
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop'
-    ]
+    images: ['./images/ropa/conjuntos-licras/conjunto-licra-dama-01.webp']
   },
   {
-    id: 'sp-04',
-    name: 'ANISHA AeroStrata Pantaloneta 2-en-1',
-    slug: 'anisha-aerostrata-running-shorts',
-    subtitle: 'Pantaloneta ultraligera con licra de compresión interna',
+    id: 'sp-lic-02',
+    name: 'Conjunto Licra Pro Fitness Dama',
+    slug: 'conjunto-licra-pro-fitness-dama',
+    subtitle: 'Conjunto estilizado para entrenamiento de fuerza y cardio',
     category: 'sportswear',
-    subcategory: 'Pantalonetas & Shorts',
+    subcategory: 'Conjuntos & Licras',
     brand: 'ANISHA',
-    gender: 'men',
-    priceEUR: 85,
-    priceUSD: 95,
-    priceCOP: 380000,
-    rating: 4.9,
-    reviewsCount: 110,
-    badge: 'TOP ATLETA',
-    description: 'La pantaloneta definitiva para correr. Malla exterior transpirable con licra interna suave que evita roces y bolsillo seguro antirrebote para teléfono.',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isBestSeller: true,
+    rating: 4.8,
+    reviewsCount: 95,
+    badge: 'TOP FITNESS',
+    description: 'Licra de tiro alto con top deportivo de soporte firme. Diseñada para no transparentar y ofrecer máxima seguridad en sentadillas.',
     techSpecs: [
-      'Bolsillo antirrebote para celular',
-      'Licra de compresión de soporte muscular',
-      'Aberturas laterales cortadas con láser'
+      'Licra de alta densidad no traslúcida',
+      'Top con soporte reforzado',
+      'Costuras planas antirozaduras',
+      'Secado rápido UltraDry'
     ],
-    materials: ['Exterior: 88% Poliéster reciclado', 'Licra: 80% Nailon, 20% Spandex'],
+    materials: ['80% Poliéster técnico', '20% Spandex'],
     colors: [
-      { name: 'Negro Mate', hex: '#111111', image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop' }
+      { name: 'Verde Oliva & Negro', hex: '#3F4E4F', image: './images/ropa/conjuntos-licras/conjunto-licra-dama-02.jpg' }
     ],
     sizes: ['S', 'M', 'L', 'XL'],
-    images: [
-      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop'
-    ]
+    images: ['./images/ropa/conjuntos-licras/conjunto-licra-dama-02.jpg']
+  },
+  {
+    id: 'sp-lic-03',
+    name: 'Conjunto Activewear JD Dama',
+    slug: 'conjunto-activewear-jd-dama',
+    subtitle: 'Set deportivo de tiro alto con tecnología anti-humedad',
+    category: 'sportswear',
+    subcategory: 'Conjuntos & Licras',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.9,
+    reviewsCount: 110,
+    badge: 'CALIDAD PREMIUM',
+    description: 'Conjunto de silueta ergonómica con paneles transpirables que mantienen el cuerpo fresco y seco durante rutinas intensas.',
+    techSpecs: [
+      'Compresión muscular graduada',
+      'Banda elástica antideslizante en cintura',
+      'Tejido elástico de alta memoria',
+      'Apto para running y gimnasio'
+    ],
+    materials: ['82% Nylon', '18% Elastano'],
+    colors: [
+      { name: 'Negro Ónix', hex: '#111111', image: './images/ropa/conjuntos-licras/conjunto-licra-dama-03.webp' }
+    ],
+    sizes: ['XS', 'S', 'M', 'L'],
+    images: ['./images/ropa/conjuntos-licras/conjunto-licra-dama-03.webp']
+  },
+  {
+    id: 'sp-lic-04',
+    name: 'Licra & Top Biker Dama',
+    slug: 'licra-top-biker-dama',
+    subtitle: 'Conjunto versátil para yoga, pilates y entrenamiento funcional',
+    category: 'sportswear',
+    subcategory: 'Conjuntos & Licras',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    rating: 4.7,
+    reviewsCount: 84,
+    badge: 'ESTILO BIKER',
+    description: 'Combinación contemporánea de top deportivo y short biker de compresión media con ajuste efecto segunda piel.',
+    techSpecs: [
+      'Ajuste efecto segunda piel',
+      'Cero transparencias garantizado',
+      'Soporte medio-alto en torso',
+      'Material transpirable antifricción'
+    ],
+    materials: ['75% Poliamida', '25% Spandex'],
+    colors: [
+      { name: 'Terracota Warm', hex: '#A75D5D', image: './images/ropa/conjuntos-licras/conjunto-licra-dama-04.jpg' }
+    ],
+    sizes: ['S', 'M', 'L'],
+    images: ['./images/ropa/conjuntos-licras/conjunto-licra-dama-04.jpg']
+  },
+  {
+    id: 'sp-lic-05',
+    name: 'Conjunto Licra Sport Flex Dama',
+    slug: 'conjunto-licra-sport-flex-dama',
+    subtitle: 'Conjunto deportivo de compresión anatómica estilizadora',
+    category: 'sportswear',
+    subcategory: 'Conjuntos & Licras',
+    brand: 'ANISHA',
+    gender: 'women',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.8,
+    reviewsCount: 76,
+    badge: 'MOLDEADOR',
+    description: 'Diseño anatómico con pretina reforzada que brinda soporte postural y sujeción óptima en abdomen y glúteos.',
+    techSpecs: [
+      'Microfibra elastizada inteligente',
+      'Panel de soporte lumbar reforzado',
+      'Termorregulación activa',
+      'Tratamiento antibacteriano'
+    ],
+    materials: ['78% Nylon', '22% Elastano'],
+    colors: [
+      { name: 'Borgoña Vino', hex: '#581845', image: './images/ropa/conjuntos-licras/conjunto-licra-dama-05.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/conjuntos-licras/conjunto-licra-dama-05.jpg']
+  },
+
+  // --- PANTALONETAS (HOMBRE) ---
+  {
+    id: 'sp-pan-01',
+    name: 'Pantaloneta Deportiva Hombre RST',
+    slug: 'pantaloneta-deportiva-hombre-rst',
+    subtitle: 'Pantaloneta con bolsillos seguros y corte ergonómico de entrenamiento',
+    category: 'sportswear',
+    subcategory: 'Pantalonetas',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isBestSeller: true,
+    rating: 4.9,
+    reviewsCount: 140,
+    badge: 'MÁS VENDIDA',
+    description: 'Pantaloneta deportiva de secado rápido con bolsillos con cierre para celular y llaves. Ideal para gimnasio, running y crossfit.',
+    techSpecs: [
+      'Bolsillos laterales con cremallera termosellada',
+      'Cintura elástica con cordón de ajuste',
+      'Tejido liviano de secado rápido',
+      'Aperturas laterales dinámicas'
+    ],
+    materials: ['90% Poliéster reciclado', '10% Elastano'],
+    colors: [
+      { name: 'Gris Grafito', hex: '#2A2E33', image: './images/ropa/pantalonetas/pantaloneta-hombre-01.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/pantalonetas/pantaloneta-hombre-01.jpg']
+  },
+  {
+    id: 'sp-pan-02',
+    name: 'Pantaloneta Pro Running Hombre',
+    slug: 'pantaloneta-pro-running-hombre',
+    subtitle: 'Pantaloneta de alto rendimiento para atletismo y gimnasio',
+    category: 'sportswear',
+    subcategory: 'Pantalonetas',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    rating: 4.8,
+    reviewsCount: 92,
+    badge: 'RUNNING PRO',
+    description: 'Corte sobre la rodilla con peso pluma que brinda libertad de movimiento zancada tras zancada sin retención de sudor.',
+    techSpecs: [
+      'Tejido microperforado ultraligero',
+      'Cero retención de humedad',
+      'Detalles reflectivos de visibilidad',
+      'Corte atlético sobre la rodilla'
+    ],
+    materials: ['88% Poliéster técnico', '12% Spandex'],
+    colors: [
+      { name: 'Negro Mate', hex: '#1A1A1A', image: './images/ropa/pantalonetas/pantaloneta-hombre-02.webp' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pantalonetas/pantaloneta-hombre-02.webp']
+  },
+  {
+    id: 'sp-pan-03',
+    name: 'Pantaloneta Sport Training Hombre',
+    slug: 'pantaloneta-sport-training-hombre',
+    subtitle: 'Pantaloneta clásica transpirable de máxima durabilidad',
+    category: 'sportswear',
+    subcategory: 'Pantalonetas',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.7,
+    reviewsCount: 81,
+    badge: 'ALTA DURABILIDAD',
+    description: 'Tejido ripstop de alta resistencia para entrenamientos de choque y cargas pesadas, manteniendo ligereza y frescura.',
+    techSpecs: [
+      'Tejido resistente a desgarros',
+      'Costuras reforzadas para alta intensidad',
+      'Cintura anatómica confortable',
+      'Forro suave antirozaduras'
+    ],
+    materials: ['100% Poliéster de alta densidad'],
+    colors: [
+      { name: 'Azul Marino', hex: '#1E3A8A', image: './images/ropa/pantalonetas/pantaloneta-hombre-03.jpg' }
+    ],
+    sizes: ['M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/pantalonetas/pantaloneta-hombre-03.jpg']
+  },
+  {
+    id: 'sp-pan-04',
+    name: 'Pantaloneta Gym & Cross Hombre',
+    slug: 'pantaloneta-gym-cross-hombre',
+    subtitle: 'Pantaloneta elástica con máxima libertad de flexión',
+    category: 'sportswear',
+    subcategory: 'Pantalonetas',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isFeatured: true,
+    rating: 4.9,
+    reviewsCount: 104,
+    badge: 'CROSS TRAINING',
+    description: 'Elasticidad multidireccional que permite sentadillas profundas y saltos explosivos sin tensión ni restricciones.',
+    techSpecs: [
+      'Elasticidad 4-Way Stretch',
+      'Bolsillo lateral para smartphone',
+      'Cintura elástica no compresiva',
+      'Evaporación acelerada del sudor'
+    ],
+    materials: ['85% Poliéster', '15% Spandex'],
+    colors: [
+      { name: 'Negro / Grafito', hex: '#111111', image: './images/ropa/pantalonetas/pantaloneta-hombre-04.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/pantalonetas/pantaloneta-hombre-04.jpg']
+  },
+
+  // --- DEPORTIVO HOMBRES (CONJUNTOS DEPORTIVOS) ---
+  {
+    id: 'sp-con-01',
+    name: 'Conjunto Chándal Nike Hombre',
+    slug: 'conjunto-chandal-nike-hombre',
+    subtitle: 'Chaqueta deportiva y pantalón jogger térmico de alta gama',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'Nike',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isFeatured: true,
+    isBestSeller: true,
+    rating: 4.9,
+    reviewsCount: 168,
+    badge: 'NOVEDAD NIKE',
+    description: 'Conjunto completo de chaqueta con cremallera y jogger a juego. Tejido térmico aislante con ajuste entallado de diseño moderno.',
+    techSpecs: [
+      'Tejido Tech Fleece aislante y ligero',
+      'Cremallera frontal completa y capucha ergonómica',
+      'Pantalón jogger con puños elásticos',
+      'Bolsillos termosellados con cremallera'
+    ],
+    materials: ['66% Algodón premium', '34% Poliéster reciclado'],
+    colors: [
+      { name: 'Negro & Gris', hex: '#1F2937', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-03.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-03.jpg']
+  },
+  {
+    id: 'sp-con-02',
+    name: 'Conjunto Deportivo Adidas Terrex Hombre',
+    slug: 'conjunto-deportivo-adidas-terrex-hombre',
+    subtitle: 'Conjunto para entrenamiento outdoor y protección climática',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'Adidas',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    rating: 4.8,
+    reviewsCount: 115,
+    badge: 'ADIDAS TERREX',
+    description: 'Conjunto técnico diseñado para resistir viento suave y bajas temperaturas durante el calentamiento y actividades al aire libre.',
+    techSpecs: [
+      'Tecnología Aeroready transpirable',
+      'Ajuste deportivo entallado',
+      'Resistente a viento suave y llovizna',
+      'Puños y dobladillo acanalados'
+    ],
+    materials: ['100% Poliéster reciclado Primegreen'],
+    colors: [
+      { name: 'Azul Petróleo', hex: '#0E7490', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-04.webp' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-04.webp']
+  },
+  {
+    id: 'sp-con-03',
+    name: 'Conjunto Deportivo Training Pro Hombre',
+    slug: 'conjunto-deportivo-training-pro-hombre',
+    subtitle: 'Buzo y pantalón de entrenamiento para atletas y gimnasio',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.8,
+    reviewsCount: 94,
+    badge: 'ALTO RENDIMIENTO',
+    description: 'Conjunto versátil de dos piezas confeccionado en felpa técnica suave con ajuste anatómico para sesiones de entrenamiento continuas.',
+    techSpecs: [
+      'Felpa interior suave térmica',
+      'Corte Slim Fit moderno',
+      'Cintura elástica con cordón trenzado',
+      'Cero deformación post-lavado'
+    ],
+    materials: ['70% Algodón', '30% Poliéster'],
+    colors: [
+      { name: 'Gris Melange', hex: '#6B7280', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-01.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-01.jpg']
+  },
+  {
+    id: 'sp-con-04',
+    name: 'Conjunto Tracksuit Sport Hombre',
+    slug: 'conjunto-tracksuit-sport-hombre',
+    subtitle: 'Conjunto de dos piezas para calentamiento y uso urbano',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.7,
+    reviewsCount: 88,
+    badge: 'URBAN SPORTS',
+    description: 'Silueta deportiva moderna con bolsillos profundos y tejido de gran caída para llevar tanto al gimnasio como en el día a día.',
+    techSpecs: [
+      'Tejido elástico de alta flexibilidad',
+      'Bolsillos laterales profundos',
+      'Capucha ajustable con cordón',
+      'Diseño ergonómico estilizado'
+    ],
+    materials: ['75% Algodón', '25% Poliéster'],
+    colors: [
+      { name: 'Negro Classic', hex: '#111827', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-02.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-02.jpg']
+  },
+  {
+    id: 'sp-con-05',
+    name: 'Conjunto Deportivo Urban Athlete Hombre',
+    slug: 'conjunto-deportivo-urban-athlete-hombre',
+    subtitle: 'Chándal contemporáneo de dos piezas para entrenamiento diario',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isNew: true,
+    rating: 4.8,
+    reviewsCount: 79,
+    badge: 'EDICIÓN ESPECIAL',
+    description: 'Conjunto liviano con cremallera frontal completa y pantalón cónico. Ajuste anatómico que permite movilidad sin exceso de tela.',
+    techSpecs: [
+      'Material transpirable de secado rápido',
+      'Cremallera de suave desplazamiento',
+      'Tobillos ajustados con elástico',
+      'Durabilidad extrema en costuras'
+    ],
+    materials: ['80% Poliéster', '20% Algodón'],
+    colors: [
+      { name: 'Azul Marino / Blanco', hex: '#1E3A8A', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-05.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-05.jpg']
+  },
+  {
+    id: 'sp-con-06',
+    name: 'Conjunto Performance Dri-Fit Hombre',
+    slug: 'conjunto-performance-dri-fit-hombre',
+    subtitle: 'Conjunto técnico diseñado para máximo rendimiento muscular',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'ANISHA',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    isFeatured: true,
+    rating: 4.9,
+    reviewsCount: 122,
+    badge: 'DRI-FIT TECH',
+    description: 'Tejido técnico con canales de ventilación axilar y lumbar. Mantiene los músculos calientes mientras disipa el sudor de forma continua.',
+    techSpecs: [
+      'Control de humedad activo',
+      'Mangas raglán para movilidad completa de hombros',
+      'Pantalón cónico ergonómico',
+      'Microventilación axilar y lumbar'
+    ],
+    materials: ['85% Poliéster Dri-Fit', '15% Elastano'],
+    colors: [
+      { name: 'Verde Militar & Negro', hex: '#374151', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-06.jpg' }
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-06.jpg']
+  },
+  {
+    id: 'sp-con-07',
+    name: 'Conjunto Elite Champion Hombre',
+    slug: 'conjunto-elite-champion-hombre',
+    subtitle: 'Conjunto deportivo premium de chaqueta y jogger de viaje y entreno',
+    category: 'sportswear',
+    subcategory: 'Deportivo Hombres',
+    brand: 'Champion',
+    gender: 'men',
+    priceEUR: 0,
+    priceUSD: 0,
+    priceCOP: 0,
+    rating: 4.9,
+    reviewsCount: 135,
+    badge: 'COLECCIÓN ELITE',
+    description: 'Chaqueta deportiva de corte regular combinada con jogger cónico. Tejido suave de alta densidad con resistencia al desgaste y arrugas.',
+    techSpecs: [
+      'Banda elástica con ribete contrastante',
+      'Tejido anti-peeling de alta resistencia',
+      'Bolsillos internos seguros',
+      'Corte atlético de alta presentación'
+    ],
+    materials: ['70% Algodón', '30% Poliéster'],
+    colors: [
+      { name: 'Negro & Volt', hex: '#0B0F19', image: './images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-07.jpg' }
+    ],
+    sizes: ['M', 'L', 'XL', 'XXL'],
+    images: ['./images/ropa/conjuntos-hombres/conjunto-deportivo-hombre-07.jpg']
   },
 
   // ==================== ZAPATILLAS (22 MODELOS OFICIALES) ====================

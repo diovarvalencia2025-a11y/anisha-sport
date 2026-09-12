@@ -10,39 +10,15 @@ export const CartDrawer: React.FC = () => {
     setIsCartOpen,
     removeFromCart,
     updateQuantity,
-    subtotal,
-    total,
-    discountPercent,
-    discountCode,
-    applyDiscount,
-    freeShippingThreshold,
-    progressToFreeShipping,
-    formatPrice,
     generateWhatsAppOrder
   } = useCart();
   const { playUiSound, navigateTo } = useNavigation();
 
-  const [inputCoupon, setInputCoupon] = useState('');
-  const [couponError, setCouponError] = useState(false);
-  const [couponSuccess, setCouponSuccess] = useState(false);
   const [customerName, setCustomerName] = useState('');
   const [customerAddress, setCustomerAddress] = useState('');
   const [showCheckoutForm, setShowCheckoutForm] = useState(false);
 
   if (!isCartOpen) return null;
-
-  const handleApplyCoupon = (e: React.FormEvent) => {
-    e.preventDefault();
-    const success = applyDiscount(inputCoupon);
-    if (success) {
-      playUiSound('success');
-      setCouponSuccess(true);
-      setCouponError(false);
-    } else {
-      setCouponError(true);
-      setCouponSuccess(false);
-    }
-  };
 
   const handleWhatsAppCheckout = () => {
     playUiSound('pop');
@@ -83,24 +59,14 @@ export const CartDrawer: React.FC = () => {
             </button>
           </div>
 
-          {/* FREE SHIPPING PROGRESS BAR */}
+          {/* SHIPPING & ATTENTION BADGE */}
           <div className="px-6 py-3 bg-surface-elevated border-b border-surface-border">
-            <div className="flex items-center justify-between text-xs font-mono mb-1.5">
-              <span className="text-white/80 flex items-center space-x-1">
+            <div className="flex items-center justify-between text-xs font-mono">
+              <span className="text-white/80 flex items-center space-x-1.5">
                 <Truck size={14} className="text-volt" />
-                <span>
-                  {progressToFreeShipping >= 100
-                    ? '🎉 ¡ENVÍO EXPRÉS GRATUITO DESBLOQUEADO!'
-                    : `Agrega ${formatPrice(Math.max(0, freeShippingThreshold - subtotal))} más para Envío Gratis`}
-                </span>
+                <span>ENVÍOS A TODA COLOMBIA • ASESORÍA DIRECTA</span>
               </span>
-              <span className="font-bold text-volt">{progressToFreeShipping}%</span>
-            </div>
-            <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-volt rounded-full transition-all duration-500 shadow-[0_0_10px_#CCFF00]"
-                style={{ width: `${progressToFreeShipping}%` }}
-              />
+              <span className="font-bold text-volt">WHATSAPP VIP</span>
             </div>
           </div>
 
@@ -179,11 +145,7 @@ export const CartDrawer: React.FC = () => {
                           </button>
                         </div>
                         <div className="font-mono font-bold text-sm text-white">
-                          {isItemNoPrice ? (
-                            <span className="text-xs text-volt font-mono">Consultar</span>
-                          ) : (
-                            formatPrice(p.priceEUR * item.quantity, p.priceUSD ? p.priceUSD * item.quantity : undefined, p.priceCOP ? p.priceCOP * item.quantity : undefined)
-                          )}
+                          <span className="text-xs text-volt font-mono">Precio a consultar</span>
                         </div>
                       </div>
                     </div>
@@ -197,48 +159,19 @@ export const CartDrawer: React.FC = () => {
           {cart.length > 0 && (
             <div className="p-6 border-t border-surface-border bg-surface-elevated space-y-4">
               
-              {/* Promo code form */}
-              <form onSubmit={handleApplyCoupon} className="flex space-x-2">
-                <input
-                  type="text"
-                  value={inputCoupon}
-                  onChange={e => setInputCoupon(e.target.value)}
-                  placeholder="Cupón de descuento (ej: ANISHA20)"
-                  className="flex-1 bg-surface border border-surface-border rounded-xl px-3 py-2 text-xs font-mono text-white placeholder-white/40 focus:outline-none focus:border-volt"
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-white/10 hover:bg-volt hover:text-black text-white rounded-xl text-xs font-mono font-bold uppercase transition-colors"
-                >
-                  Aplicar
-                </button>
-              </form>
-              {couponSuccess && (
-                <p className="text-[11px] font-mono text-volt">✓ Cupón {discountCode} aplicado (-{discountPercent}%)</p>
-              )}
-              {couponError && (
-                <p className="text-[11px] font-mono text-crimson">✗ Código de cupón inválido. Prueba ANISHA20</p>
-              )}
-
               {/* Total Calculation */}
               <div className="space-y-1.5 text-xs font-mono text-white/70 pt-2 border-t border-white/10">
                 <div className="flex justify-between">
-                  <span>Subtotal ropa</span>
-                  <span>{formatPrice(subtotal)}</span>
+                  <span>Productos en lista</span>
+                  <span className="text-white font-bold">{cart.length}</span>
                 </div>
-                {discountPercent > 0 && (
-                  <div className="flex justify-between text-volt">
-                    <span>Descuento ({discountCode})</span>
-                    <span>-{formatPrice(subtotal * (discountPercent / 100))}</span>
-                  </div>
-                )}
+                <div className="flex justify-between">
+                  <span>Precios & Catálogo</span>
+                  <span className="text-volt font-semibold">A consultar vía WhatsApp</span>
+                </div>
                 <div className="flex justify-between">
                   <span>Envío estimado</span>
-                  <span className="text-volt">{progressToFreeShipping >= 100 ? 'GRATIS' : 'A convenir vía WhatsApp'}</span>
-                </div>
-                <div className="flex justify-between text-base font-bold text-white pt-2 border-t border-white/10">
-                  <span className="font-display">TOTAL PRODUCTOS</span>
-                  <span className="text-volt">{formatPrice(total)}</span>
+                  <span className="text-volt">A convenir vía WhatsApp</span>
                 </div>
               </div>
 

@@ -80,11 +80,11 @@ export const SneakersPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
             <Wind size={14} />
-            <span>CATEGORY 02 // SNEAKERS & RUNNING</span>
+            <span>CATEGORÍA 02 // CALZADO & RUNNING</span>
           </div>
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-none">
-            ENGINEERED <br />
-            <span className="text-volt">TO MOVE.</span>
+            DISEÑADAS <br />
+            <span className="text-volt">PARA MOVERTE.</span>
           </h1>
           <p className="text-xs sm:text-sm text-white/70 max-w-xl font-light">
             Las mejores marcas de calzado deportivo y zapatillas exclusivas: Nike, Adidas, New Balance, On Cloud, Le Coq Sportif, BOSS y Champion.
