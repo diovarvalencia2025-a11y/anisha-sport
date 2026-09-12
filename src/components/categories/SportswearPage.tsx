@@ -65,27 +65,33 @@ export const SportswearPage: React.FC = () => {
     <div className="min-h-screen bg-background text-white pt-24 pb-32 animate-fadeIn">
       
       {/* 01 // SPORTSWEAR HERO BANNER */}
-      <section className="relative h-[60vh] sm:h-[70vh] w-full overflow-hidden flex items-end pb-12 sm:pb-16 bg-[#070707]">
-        <img
-          src="./images/hero/hero-sportswear.png"
-          alt="ANISHA Ropa Deportiva"
-          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right transition-transform duration-1000"
-        />
-        {/* Degradado negro de izquierda a derecha difuminándose totalmente a la derecha para nitidez total */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-[#070707]/80 via-35% md:via-45% to-transparent to-85% md:to-80% pointer-events-none" />
+      <section className="relative h-[50vh] sm:h-[58vh] min-h-[440px] max-h-[560px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
+        {/* Contenedor de la imagen enmarcado a la derecha para escala natural sin cortes */}
+        <div className="absolute inset-y-0 right-0 w-full md:w-[75%] lg:w-[60%] xl:w-[55%] overflow-hidden pointer-events-none">
+          <img
+            src="./images/hero/hero-sportswear.png"
+            alt="ANISHA Ropa Deportiva"
+            className="w-full h-full object-cover object-[right_top] md:object-[90%_15%] filter brightness-[1] contrast-[1.05]"
+          />
+          {/* Difuminado suave izquierdo del marco de la imagen hacia el fondo negro */}
+          <div className="absolute inset-y-0 left-0 w-1/3 md:w-1/2 bg-gradient-to-r from-[#070707] via-[#070707]/75 to-transparent" />
+        </div>
+
+        {/* Degradado general de izquierda a derecha para contraste de texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-[#070707]/90 md:via-[#070707]/40 to-transparent pointer-events-none" />
         {/* Sutil fundido inferior con el fondo */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent pointer-events-none" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-volt uppercase px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
             <Activity size={14} />
             <span>CATEGORÍA 01 // INDUMENTARIA & TEXTIL</span>
           </div>
-          <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-none">
+          <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-white leading-none">
             ENTRENA SIN <br />
             <span className="text-volt">LÍMITES.</span>
           </h1>
-          <p className="text-xs sm:text-sm text-white/80 max-w-xl font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-white/80 max-w-md font-light leading-relaxed">
             Pijamas de descanso, conjuntos y licras de compresión para dama, pantalonetas y conjuntos deportivos para caballero.
           </p>
         </div>
