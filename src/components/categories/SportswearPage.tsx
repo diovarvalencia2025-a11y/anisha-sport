@@ -65,13 +65,13 @@ export const SportswearPage: React.FC = () => {
     <div className="min-h-screen bg-background text-white pt-24 pb-32 animate-fadeIn">
       
       {/* 01 // SPORTSWEAR HERO BANNER */}
-      <section className="relative h-[52vh] sm:h-[62vh] min-h-[460px] max-h-[600px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
+      <section className="relative h-[56vh] sm:h-[66vh] min-h-[500px] max-h-[640px] w-full overflow-hidden flex items-end pb-10 sm:pb-14 bg-[#070707]">
         {/* Foto de fondo completa del gimnasio */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
             src="./images/hero/hero-sportswear.png"
             alt="ANISHA Ropa Deportiva"
-            className="w-full h-full object-cover object-[82%_15%] sm:object-[80%_20%] md:object-[78%_25%] filter brightness-[1.02] contrast-[1.04]"
+            className="w-full h-full object-cover object-[82%_top] sm:object-[80%_top] md:object-[78%_top] filter brightness-[1.02] contrast-[1.04]"
           />
         </div>
 
